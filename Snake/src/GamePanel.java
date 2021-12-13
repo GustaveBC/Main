@@ -34,19 +34,19 @@ public class GamePanel extends JPanel implements ActionListener{
 		this.setPreferredSize(new Dimension(SCREEN_WIDTH, SCREEN_HEIGHT));
 		this.setBackground(Color.BLACK);
 		this.setFocusable(true);
-		this.addKeyListener(new myKeyAdapter());// Determines the key listener, witch will modify direction
+		this.addKeyListener(new myKeyAdapter());
 		startGame();
 	}
 	public void startGame() {
 		newApple();// creates an apple
-		running = true;// to verify if the game is running, set to true on start
-		timer = new Timer(DELAY,this);// timer, 'this' is the object to witch it applies
+		running = true;
+		timer = new Timer(DELAY,this);
 		timer.start();
 	}
 	
 	public void paintComponent(Graphics g) {
-		super.paintComponent(g);//just uses the n1 method ig
-		draw(g);	// executes 'draw'
+		super.paintComponent(g);
+		draw(g);
 	}
 	
 	public void draw(Graphics g) {
